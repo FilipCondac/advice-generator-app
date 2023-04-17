@@ -5,9 +5,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bgDark: "#202C36",
-        bgLight: "#F2F2F2",
-        primaryDark: "#2B3844",
+        "light-cyan": "hsl(193, 38%, 86%)",
+        "neon-green": "hsl(150, 100%, 66%)",
+        "grayish-blue": "hsl(217, 19%, 38%)",
+        "dark-grayish-blue": "hsl(217, 19%, 24%)",
+        "dark-blue": "hsl(218, 23%, 16%)",
+      },
+      fontFamily: {
+        Manrope: ['"Manrope"', "sans-serif"],
+      },
+      screens: {
+        mobile: { max: "730px" },
+        desktop: { max: "1100px" },
       },
       animation: {
         // Bounces for a total of 5 seconds
@@ -19,6 +28,7 @@ module.exports = {
         fadeOut: "fadeOut 2s ease-in",
         fadeIn: "fadeIn 1s ease-in",
       },
+
       keyframes: {
         flip: {
           "0%,80%": {
