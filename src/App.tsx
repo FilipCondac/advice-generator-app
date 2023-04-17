@@ -1,16 +1,26 @@
 import { useEffect, useState } from "react";
 
+// Interface for API data
+interface AdviceData {
+  slip: {
+    id: number;
+    advice: string;
+  };
+}
+
 const App = () => {
   useEffect(() => {
     fetchData();
   }, []);
 
+  // Fetch data from API
   const fetchData = async () => {
     const res = await fetch("https://api.adviceslip.com/advice");
-    const data = await res.json();
+    const data: AdviceData = await res.json();
+
+    // Set state
     setAdviceString(data.slip.advice);
     setAdviceId(data.slip.id);
-    console.log(data);
   };
 
   const [adviceString, setAdviceString] = useState<string>("");
