@@ -20,10 +20,10 @@ const App = () => {
     <main className="flex flex-col h-screen overflow-visible justify-center font-Manrope bg-dark-blue">
       <div className="flex-col m-auto bg-dark-grayish-blue w-4/12 rounded-xl h-96 p-10 text-center mobile:w-11/12">
         <h2 className="text-neon-green uppercase tracking-wider text-sm m-auto">
-          Advice #{adviceId}
+          Advice #{adviceId || "Loading..."}
         </h2>
         <div className="text-3xl text-white h-44 w-10/12 mt-5 text-center m-auto mb-5 desktop:text-2xl">
-          "{adviceString}"
+          {adviceString || "Loading..."}
         </div>
         <img
           src="./images/pattern-divider-desktop.svg"
